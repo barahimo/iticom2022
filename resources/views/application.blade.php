@@ -250,7 +250,8 @@
                             @foreach($produits as $produit)
                             <tr>
                                 <td>
-                                    {{$produit->code_produit}}
+                                    <span>{{$produit->code_produit}} : </span>
+                                    <span class="badge badge-light">{{$produit->nom_produit}}</span> 
                                 </td>
                             </tr>
                             @endforeach

@@ -4,6 +4,23 @@
 table{
     width: 100%;
 }
+
+/* ******************************************* */
+/* .headerVision { 
+    height: 15px;
+    font-size:8px;
+} */
+.headerVision tr { 
+    border-right:1pt dashed black;
+    border-left:1pt dashed black;
+}
+.headerVision tr:first-child{ 
+    border-top:1pt dashed black;
+}
+.headerVision tr:last-child{ 
+    border-bottom:1pt dashed black;
+}
+/* *************************************** */
 .headerFacture { 
     /* font-size:8px ; */
     /* font-size:23px; */

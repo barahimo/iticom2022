@@ -74,7 +74,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
                     <h5>Quantité stock : </h5>
                     <div>
-                        <span class="badge badge-primary">{{number_format($produit->quantité,2)}}</span>
+                        <span class="badge badge-primary">{{number_format($produit->quantite,2)}}</span>
                     </div>
                     <hr>
                 </div>

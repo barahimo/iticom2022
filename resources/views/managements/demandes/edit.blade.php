@@ -149,14 +149,14 @@
   <!-- Begin Payement  -->
   <div class="card text-left">
       <div class="card-body">
-        <h5 class="card-title">Les payements :</h5>
+        <h5 class="card-title">Les paiements :</h5>
         <div class="card-text">
           <div class="form-row">
             <div class="col-3">
-                <label for="mode">Date de payement :</label>
+                <label for="mode">Date de paiement :</label>
             </div>
             <div class="col-3">
-              <label for="mode">Mode de payement :</label>
+              <label for="mode">Mode de paiement :</label>
             </div>
             <div class="col-2">
               <label for="nom">Montant payer :</label>

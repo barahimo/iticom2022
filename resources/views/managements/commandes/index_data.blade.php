@@ -38,18 +38,7 @@
         // -------------------------------------------------------------------- //
       ?>
       <tr>
-        <?php
-          $data = $commande->vision_loin;
-        ?>
-        @if($data)
-        @if(isset(json_decode($data,false)->axe_droite_loin))
-        <td>{{json_decode($data,false)->axe_droite_loin}}</td>
-        @else
-        <td>vide</td>
-        @endif
-        @else
         <td>{{$commande->code}}</td>
-        @endif
         <td>{{$commande->date}}</td>
         <td>{{$commande->client->nom_client}}</td>
         <td>{{number_format($commande->total,2, '.', '')}}</td>
@@ -105,7 +94,7 @@
                     id="btnDelete1{{$index+1}}" 
                     data-id="{{$commande->id}}" 
                     data-route="{{$url_delete1}}" 
-                    href="javascript:deletecommande({{$index+1}})">
+                    href="javascript:deleteCommande({{$index+1}})">
                       <i class="fas fa-trash-alt fa-0.5px"></i>
                   </a>
                   @endif
