@@ -185,8 +185,37 @@ class CommandeController extends Controller
             $id = $request->input('id');
             $date = $request->input('date');
             $client = $request->input('client');
-            $gauche = $request->input('gauche');
-            $droite = $request->input('droite');
+            // $gauche = $request->input('gauche');
+            // --------------------- //
+            $sphere_gauche_loin=$request->input('sphere_gauche_loin');
+            $cylindre_gauche_loin=$request->input('cylindre_gauche_loin');
+            $axe_gauche_loin=$request->input('axe_gauche_loin');
+            $lentille_gauche_loin=$request->input('lentille_gauche_loin');
+            $eip_gauche_loin=$request->input('eip_gauche_loin');
+            $hauteur_gauche_loin=$request->input('hauteur_gauche_loin');
+            // --------------------- //
+            $sphere_droite_loin=$request->input('sphere_droite_loin');
+            $cylindre_droite_loin=$request->input('cylindre_droite_loin');
+            $axe_droite_loin=$request->input('axe_droite_loin');
+            $lentille_droite_loin=$request->input('lentille_droite_loin');
+            $eip_droite_loin=$request->input('eip_droite_loin');
+            $hauteur_droite_loin=$request->input('hauteur_droite_loin');
+            // --------------------- //
+            $sphere_gauche_pres=$request->input('sphere_gauche_pres');
+            $cylindre_gauche_pres=$request->input('cylindre_gauche_pres');
+            $axe_gauche_pres=$request->input('axe_gauche_pres');
+            $lentille_gauche_pres=$request->input('lentille_gauche_pres');
+            $eip_gauche_pres=$request->input('eip_gauche_pres');
+            $hauteur_gauche_pres=$request->input('hauteur_gauche_pres');
+            // --------------------- //
+            $sphere_droite_pres=$request->input('sphere_droite_pres');
+            $cylindre_droite_pres=$request->input('cylindre_droite_pres');
+            $axe_droite_pres=$request->input('axe_droite_pres');
+            $lentille_droite_pres=$request->input('lentille_droite_pres');
+            $eip_droite_pres=$request->input('eip_droite_pres');
+            $hauteur_droite_pres=$request->input('hauteur_droite_pres');
+            // --------------------- //
+            // $droite = $request->input('droite');
 
             $reglements = $request->input('reglements');
             $count_reglements = $request->input('count_reglements');
@@ -200,8 +229,43 @@ class CommandeController extends Controller
                 $commande->date = $date;
                 $commande->client_id = $client;
 
-                $commande->oeil_gauche = $gauche;
-                $commande->oeil_droite = $droite;
+                // $commande->oeil_gauche = $gauche;
+                $json_loin = [
+                    'sphere_gauche_loin'=>$sphere_gauche_loin,
+                    'cylindre_gauche_loin'=>$cylindre_gauche_loin,
+                    'axe_gauche_loin'=>$axe_gauche_loin,
+                    'lentille_gauche_loin'=>$lentille_gauche_loin,
+                    'eip_gauche_loin'=>$eip_gauche_loin,
+                    'hauteur_gauche_loin'=>$hauteur_gauche_loin,
+                    // --------------------- //
+                    'sphere_droite_loin'=>$sphere_droite_loin,
+                    'cylindre_droite_loin'=>$cylindre_droite_loin,
+                    'axe_droite_loin'=>$axe_droite_loin,
+                    'lentille_droite_loin'=>$lentille_droite_loin,
+                    'eip_droite_loin'=>$eip_droite_loin,
+                    'hauteur_droite_loin'=>$hauteur_droite_loin,
+                ];
+                $obj_loin = json_encode($json_loin);
+                $commande->vision_loin = $obj_loin; 
+                $json_pres = [
+                    'sphere_gauche_pres'=>$sphere_gauche_pres,
+                    'cylindre_gauche_pres'=>$cylindre_gauche_pres,
+                    'axe_gauche_pres'=>$axe_gauche_pres,
+                    'lentille_gauche_pres'=>$lentille_gauche_pres,
+                    'eip_gauche_pres'=>$eip_gauche_pres,
+                    'hauteur_gauche_pres'=>$hauteur_gauche_pres,
+                    // --------------------- //
+                    'sphere_droite_pres'=>$sphere_droite_pres,
+                    'cylindre_droite_pres'=>$cylindre_droite_pres,
+                    'axe_droite_pres'=>$axe_droite_pres,
+                    'lentille_droite_pres'=>$lentille_droite_pres,
+                    'eip_droite_pres'=>$eip_droite_pres,
+                    'hauteur_droite_pres'=>$hauteur_droite_pres,
+                ];
+                $obj_pres = json_encode($json_pres);
+                $commande->vision_pres = $obj_pres; 
+                // $commande->oeil_droite = $droite;
+                
                 $commande->facture = "nf"; 
 
                 $commande->avance = $cmd_avance;

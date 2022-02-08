@@ -43,8 +43,8 @@
   </div>
   <!-- End Commande_Client  -->
   <br>
-   <!-- Begin Mesure_Client  -->
-   <div class="card text-left">
+  <!-- Begin Mesure_Client  -->
+  <div class="card text-left">
      <div class="card-header">
        <div class="card-title">
          <h5>Mesures</h5>
@@ -572,7 +572,7 @@
     // -----------End keyup Avance--------------//
     // -----------Begin valider--------------//
     $(document).on('click','#valider',function(e){
-      // $('#valider').prop('disabled',true);
+      $('#valider').prop('disabled',true);
       // e.preventDefault(); //Pour ne peut refresh la page en cas de bouton submit 
       var _token=$('input[name=_token]'); //Envoi des information via method POST
       // ***** BEGIN variables commande ******** //

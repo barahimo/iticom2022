@@ -73,15 +73,15 @@
             <div class="row" style="font-weight: bold;" id="tfoot_paginate">
                 <div class="col-4 text-center">
                     <span>Totaux TTC :</span> 
-                    <span>{{number_format($totaux_ttc,2)}} DH</span> 
+                    <span>{{number_format($totaux_ttc,2, '.', '')}} DH</span> 
                 </div>
                 <div class="col-4 text-center">
                     <span>Totaux TVA :</spant> 
-                    <span>{{number_format($totaux_ttc - $totaux_ht,2)}} DH</span> 
+                    <span>{{number_format($totaux_ttc - $totaux_ht,2, '.', '')}} DH</span> 
                 </div>
                 <div class="col-4 text-center">
                     <span>Totaux HT :</spant> 
-                    <span>{{number_format($totaux_ht,2)}} DH</span> 
+                    <span>{{number_format($totaux_ht,2, '.', '')}} DH</span> 
                 </div>
             </div>
             {{-- -----BEGIN table-responsive----------- --}}
@@ -107,9 +107,9 @@
                                 <td>{{$facture->commande->code}}</td>
                                 <td>{{$facture->date}}</td>
                                 <td>{{$facture->commande->client->nom_client}}</td>
-                                <td>{{number_format($facture->total_HT,2)}}</td>
-                                <td>{{number_format($facture->total_TVA,2)}}</td>
-                                <td>{{number_format($facture->total_TTC,2)}}</td>
+                                <td>{{number_format($facture->total_HT,2, '.', '')}}</td>
+                                <td>{{number_format($facture->total_TVA,2, '.', '')}}</td>
+                                <td>{{number_format($facture->total_TTC,2, '.', '')}}</td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -117,17 +117,17 @@
                         <tr>
                             <th class="text-right" colspan="4"></th>
                             <th class="text-right" colspan="2">Totaux TTC :</th>
-                            <th>{{number_format($totaux_ttc,2)}} DH</th>
+                            <th>{{number_format($totaux_ttc,2, '.', '')}} DH</th>
                         </tr>
                         <tr>
                             <th class="text-right" colspan="4"></th>
                             <th class="text-right" colspan="2">Totaux TVA :</th>
-                            <th>{{number_format($totaux_ttc-$totaux_ht,2)}} DH</th>
+                            <th>{{number_format($totaux_ttc-$totaux_ht,2, '.', '')}} DH</th>
                         </tr>
                         <tr>
                             <th class="text-right" colspan="4"></th>
                             <th class="text-right" colspan="2">Totaux HT :</th>
-                            <th>{{number_format($totaux_ht,2)}} DH</th>
+                            <th>{{number_format($totaux_ht,2, '.', '')}} DH</th>
                         </tr>
                     </tfoot>
                 </table>

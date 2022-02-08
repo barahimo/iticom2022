@@ -49,24 +49,174 @@
   <br>
   <!-- Begin Mesure_Client  -->
   <div class="card text-left">
-    <div class="card-body">
-      <h5 class="card-title">Mesures :</h5>
-      <div class="card-text">
-          <div class="form-row">
-            <div class="col-6">
-              <label for="gauche">Oeil gauche</label>
-              <input type="text" class="form-control" name="oeil_gauche" id="gauche" placeholder="Oeil gauche">
-            </div>
-            <div class="col-6">
-              <label for="droite">Oeil droite</label>
-              <input type="text" class="form-control" name="oeil_droite" id="droite" placeholder="Oeil droite">
-            </div>
-          </div>
+    <div class="card-header">
+      <div class="card-title">
+        <h5>Mesures</h5>
       </div>
     </div>
-  </div>
-  <!-- End Mesure_Client  -->
-  <br>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+           <div class="card text-black">
+             <div class="card-header bg-primary text-white text-center" style="height: 40px;">
+               <div class="card-title">
+                 <h6 class="font-weight-bold">Vision de loin <i class="fas fa-arrow-down" id="icon_loin" onclick="eventLoin()"></i></h6>
+               </div>
+             </div>
+             <div class="card-body" id="div_loin" style="display: none;">
+               <div class="row">
+                   <div class="col">
+                     <fieldset style="border: 1px groove #ddd !important;padding: 0 1.4em 1.4em 1.4em !important;margin: 0 0 1.5em 0 !important;-webkit-box-shadow:  0px 0px 0px 0px #000;box-shadow:  0px 0px 0px 0px #000;">
+                       <legend style="font-size: 1em !important; color : #007BFF !important;text-align: left !important;">
+                         <span><i class="fas fa-eye fa-1x">&nbsp;Gauche</i></span>
+                       </legend>
+                       <div class="form-row">
+                         <div class="col-md-6">
+                           <label for="sphere_gauche_loin">Sphère : </label>
+                           <input type="text" class="form-control" name="sphere_gauche_loin" id="sphere_gauche_loin" placeholder="Sphère">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="cylindre_gauche_loin">Cylindre : </label>
+                           <input type="text" class="form-control" name="cylindre_gauche_loin" id="cylindre_gauche_loin" placeholder="Cylindre">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="axe_gauche_loin">Axe : </label>
+                           <input type="text" class="form-control" name="axe_gauche_loin" id="axe_gauche_loin" placeholder="Axe">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="lentille_gauche_loin">Lentille : </label>
+                           <input type="text" class="form-control" name="lentille_gauche_loin" id="lentille_gauche_loin" placeholder="Lentille">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="eip_gauche_loin">Eip : </label>
+                           <input type="text" class="form-control" name="eip_gauche_loin" id="eip_gauche_loin" placeholder="Eip">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="hauteur_gauche_loin">Hauteur : </label>
+                           <input type="text" class="form-control" name="hauteur_gauche_loin" id="hauteur_gauche_loin" placeholder="Hauteur">
+                         </div>
+                       </div>
+                     </fieldset>
+                   </div>
+                   <div class="col">
+                     <fieldset style="border: 1px groove #ddd !important;padding: 0 1.4em 1.4em 1.4em !important;margin: 0 0 1.5em 0 !important;-webkit-box-shadow:  0px 0px 0px 0px #000;box-shadow:  0px 0px 0px 0px #000;">
+                       <legend style="font-size: 1em !important; color : #007BFF !important;text-align: left !important;">
+                           <span><i class="fas fa-eye fa-1x">&nbsp;Droite</i></span>
+                       </legend>
+                       <div class="form-row">
+                         <div class="col-md-6">
+                           <label for="sphere_droite_loin">Sphère : </label>
+                           <input type="text" class="form-control" name="sphere_droite_loin" id="sphere_droite_loin" placeholder="Sphère">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="cylindre_droite_loin">Cylindre : </label>
+                           <input type="text" class="form-control" name="cylindre_droite_loin" id="cylindre_droite_loin" placeholder="Cylindre">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="axe_droite_loin">Axe : </label>
+                           <input type="text" class="form-control" name="axe_droite_loin" id="axe_droite_loin" placeholder="Axe">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="lentille_droite_loin">Lentille : </label>
+                           <input type="text" class="form-control" name="lentille_droite_loin" id="lentille_droite_loin" placeholder="Lentille">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="eip_droite_loin">Eip : </label>
+                           <input type="text" class="form-control" name="eip_droite_loin" id="eip_droite_loin" placeholder="Eip">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="hauteur_droite_loin">Hauteur : </label>
+                           <input type="text" class="form-control" name="hauteur_droite_loin" id="hauteur_droite_loin" placeholder="Hauteur">
+                         </div>
+                       </div>
+                     </fieldset>
+                   </div>
+               </div>
+             </div>
+           </div>
+        </div>
+        <div class="col-md-12">
+           <div class="card">
+             <div class="card-header bg-primary text-white text-center" style="height: 40px;">
+               <h6 class="font-weight-bold">Vision de près <i class="fas fa-arrow-down" id="icon_pres" onclick="eventPres()"></i></h6>
+             </div>
+             <div class="card-body" id="div_pres" style="display: none;">
+               <div class="row">
+                   <div class="col">
+                     <fieldset style="border: 1px groove #ddd !important;padding: 0 1.4em 1.4em 1.4em !important;margin: 0 0 1.5em 0 !important;-webkit-box-shadow:  0px 0px 0px 0px #000;box-shadow:  0px 0px 0px 0px #000;">
+                       <legend style="font-size: 1em !important; color : #007BFF !important;text-align: left !important;">
+                         <span><i class="fas fa-eye fa-1x">&nbsp;Gauche</i></span>
+                       </legend>
+                       <div class="form-row">
+                         <div class="col-md-6">
+                           <label for="sphere_gauche_pres">Sphère : </label>
+                           <input type="text" class="form-control" name="sphere_gauche_pres" id="sphere_gauche_pres" placeholder="Sphère">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="cylindre_gauche_pres">Cylindre : </label>
+                           <input type="text" class="form-control" name="cylindre_gauche_pres" id="cylindre_gauche_pres" placeholder="Cylindre">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="axe_gauche_pres">Axe : </label>
+                           <input type="text" class="form-control" name="axe_gauche_pres" id="axe_gauche_pres" placeholder="Axe">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="lentille_gauche_pres">Lentille : </label>
+                           <input type="text" class="form-control" name="lentille_gauche_pres" id="lentille_gauche_pres" placeholder="Lentille">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="dreip_gauche_pres">Eip : </label>
+                           <input type="text" class="form-control" name="eip_gauche_pres" id="eip_gauche_pres" placeholder="Eip">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="hauteur_gauche_pres">Hauteur : </label>
+                           <input type="text" class="form-control" name="hauteur_gauche_pres" id="hauteur_gauche_pres" placeholder="Hauteur">
+                         </div>
+                       </div>
+                     </fieldset>
+                   </div>
+                   <div class="col">
+                     <fieldset style="border: 1px groove #ddd !important;padding: 0 1.4em 1.4em 1.4em !important;margin: 0 0 1.5em 0 !important;-webkit-box-shadow:  0px 0px 0px 0px #000;box-shadow:  0px 0px 0px 0px #000;">
+                       <legend style="font-size: 1em !important; color : #007BFF !important;text-align: left !important;">
+                           <span><i class="fas fa-eye fa-1x">&nbsp;Droite</i></span>
+                       </legend>
+                       <div class="form-row">
+                         <div class="col-md-6">
+                           <label for="sphere_droite_pres">Sphère : </label>
+                           <input type="text" class="form-control" name="sphere_droite_pres" id="sphere_droite_pres" placeholder="Sphère">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="cylindre_droite_pres">Cylindre : </label>
+                           <input type="text" class="form-control" name="cylindre_droite_pres" id="cylindre_droite_pres" placeholder="Cylindre">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="axe_droite_pres">Axe : </label>
+                           <input type="text" class="form-control" name="axe_droite_pres" id="axe_droite_pres" placeholder="Axe">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="lentille_droite_pres">Lentille : </label>
+                           <input type="text" class="form-control" name="lentille_droite_pres" id="lentille_droite_pres" placeholder="Lentille">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="eip_droite_pres">Eip : </label>
+                           <input type="text" class="form-control" name="eip_droite_pres" id="eip_droite_pres" placeholder="Eip">
+                         </div>
+                         <div class="col-md-6">
+                           <label for="hauteur_droite_pres">Hauteur : </label>
+                           <input type="text" class="form-control" name="hauteur_droite_pres" id="hauteur_droite_pres" placeholder="Hauteur">
+                         </div>
+                       </div>
+                     </fieldset>
+                   </div>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+ </div>
+ <br>
+ <!-- End Mesure_Client  -->
   <!-- Begin Category_Product  -->
   <div class="card text-left">
     <div class="card-body">
@@ -581,8 +731,37 @@
       var date=$('#date');
       var client=$('#client');
       var facture=$('#facture');
-      var gauche=$('#gauche');
-      var droite=$('#droite');
+      // var gauche=$('#gauche');
+      // --------------------- //
+      sphere_gauche_loin=$('#sphere_gauche_loin');
+      cylindre_gauche_loin=$('#cylindre_gauche_loin');
+      axe_gauche_loin=$('#axe_gauche_loin');
+      lentille_gauche_loin=$('#lentille_gauche_loin');
+      eip_gauche_loin=$('#eip_gauche_loin');
+      hauteur_gauche_loin=$('#hauteur_gauche_loin');
+      // --------------------- //
+      sphere_droite_loin=$('#sphere_droite_loin');
+      cylindre_droite_loin=$('#cylindre_droite_loin');
+      axe_droite_loin=$('#axe_droite_loin');
+      lentille_droite_loin=$('#lentille_droite_loin');
+      eip_droite_loin=$('#eip_droite_loin');
+      hauteur_droite_loin=$('#hauteur_droite_loin');
+      // --------------------- //
+      sphere_gauche_pres=$('#sphere_gauche_pres');
+      cylindre_gauche_pres=$('#cylindre_gauche_pres');
+      axe_gauche_pres=$('#axe_gauche_pres');
+      lentille_gauche_pres=$('#lentille_gauche_pres');
+      eip_gauche_pres=$('#eip_gauche_pres');
+      hauteur_gauche_pres=$('#hauteur_gauche_pres');
+      // --------------------- //
+      sphere_droite_pres=$('#sphere_droite_pres');
+      cylindre_droite_pres=$('#cylindre_droite_pres');
+      axe_droite_pres=$('#axe_droite_pres');
+      lentille_droite_pres=$('#lentille_droite_pres');
+      eip_droite_pres=$('#eip_droite_pres');
+      hauteur_droite_pres=$('#hauteur_droite_pres');
+      // --------------------- //
+      // var droite=$('#droite');
       // ***** END variables commande ******** //
 
       // ***** BEGIN variables lignes ******** //
@@ -632,8 +811,35 @@
           date : date.val(),
           client : parseInt(client.val()),
           code_facture : facture.val(),
-          gauche : gauche.val(),
-          droite : droite.val(),
+          // gauche : gauche.val(),
+          sphere_gauche_loin:sphere_gauche_loin.val(),
+          cylindre_gauche_loin:cylindre_gauche_loin.val(),
+          axe_gauche_loin:axe_gauche_loin.val(),
+          lentille_gauche_loin:lentille_gauche_loin.val(),
+          eip_gauche_loin:eip_gauche_loin.val(),
+          hauteur_gauche_loin:hauteur_gauche_loin.val(),
+          // --------------------- //
+          sphere_droite_loin:sphere_droite_loin.val(),
+          cylindre_droite_loin:cylindre_droite_loin.val(),
+          axe_droite_loin:axe_droite_loin.val(),
+          lentille_droite_loin:lentille_droite_loin.val(),
+          eip_droite_loin:eip_droite_loin.val(),
+          hauteur_droite_loin:hauteur_droite_loin.val(),
+          // --------------------- //
+          sphere_gauche_pres:sphere_gauche_pres.val(),
+          cylindre_gauche_pres:cylindre_gauche_pres.val(),
+          axe_gauche_pres:axe_gauche_pres.val(),
+          lentille_gauche_pres:lentille_gauche_pres.val(),
+          eip_gauche_pres:eip_gauche_pres.val(),
+          hauteur_gauche_pres:hauteur_gauche_pres.val(),
+          // --------------------- //
+          sphere_droite_pres:sphere_droite_pres.val(),
+          cylindre_droite_pres:cylindre_droite_pres.val(),
+          axe_droite_pres:axe_droite_pres.val(),
+          lentille_droite_pres:lentille_droite_pres.val(),
+          eip_droite_pres:eip_droite_pres.val(),
+          hauteur_droite_pres:hauteur_droite_pres.val(),
+          // droite : droite.val(),
           lignes : array,
           mode:mode.val(),
           avance:parseFloat(avance.val()),
@@ -689,6 +895,23 @@
     });
     // -----------End valider--------------//
   });
+  // -----------Display vision loin--------------//
+  var loin = true;
+  var pres = true;
+  function eventLoin(){
+    (loin) ? styleDiv = 'display : block' : styleDiv = 'display : none';  
+    $('#div_loin').attr('style',styleDiv);  
+    (loin) ? iconClass = 'fas fa-arrow-up' : iconClass = 'fas fa-arrow-down';  
+    $('#icon_loin').attr('class',iconClass);  
+    loin = !loin; 
+  }
+  function eventPres(){
+    (pres) ? styleDiv = 'display : block' : styleDiv = 'display : none';  
+    $('#div_pres').attr('style',styleDiv);  
+    (pres) ? iconClass = 'fas fa-arrow-up' : iconClass = 'fas fa-arrow-down';  
+    $('#icon_pres').attr('class',iconClass);  
+    pres = !pres; 
+  }
   // -----------My function--------------//
   function remove(id){
     var i = checkIndex(id);
